@@ -46,20 +46,20 @@ buttons.forEach(button => {
         let value = button.textContent
 
 
-        if (!isNaN(value)) {
-            if (display.textContent === '0') {
+        if (!isNaN(value) || value === ".") {
+            if (value === "." && display.textContent.includes(".")) return;
 
-                display.textContent = value
+            if (display.textContent === '0' && value !== ".") {
+                display.textContent = value;
             } else {
-                display.textContent += value
+                display.textContent += value;
             }
-
-        } else if (['+', '-', '*', '/'].includes(value)) {
-            firstOperand = parseFloat(display.textContent);
-            operator = value
-            display.textContent = 0
         }
-
+        else if (['+', '-', '*', '/'].includes(value)) {
+            firstOperand = parseFloat(display.textContent);
+            operator = value;
+            display.textContent = '0';
+        }
 
 
         else if (value === '=') {
@@ -73,13 +73,16 @@ buttons.forEach(button => {
             }
 
             display.textContent = calc.currentValue;
+            operator = null;
+        }
 
-        } else if (value === 'C') {
+        else if (value === 'C') {
             calc.clear();
             firstOperand = null;
             operator = null;
             display.textContent = '0';
         }
+
 
     })
 
