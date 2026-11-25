@@ -9,36 +9,36 @@ html {
 }
 
 #calculator {
-  max-width: 500px;
-  padding: 2rem;
+  max-width: 600px;
+  padding: 2.5rem;
   border: 2px solid rgb(185, 185, 185);
-  border-radius: 1.2rem;
 }
 #display {
-  border: 1px solid #e2e2e2;
+  border: 1px solid #a7a7a7;
   padding: 1rem;
-  background-color: white;
+  background-color: #e7e7e7;
   height: 4rem;
   text-align: right;
   margin-bottom: 3rem;
   font-size: 2rem;
-  border-radius: 0.5rem;
+  font-weight: 600;
 }
 button {
   border: 2px solid #e2e2e2;
-  width: 4rem;
+  width: 5rem;
   background-color: white;
   text-align: center;
-  height: 4rem;
+  height: 5rem;
   border-radius: 100%;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.6rem;
+  gap: 2rem;
 }
 
 button:hover {

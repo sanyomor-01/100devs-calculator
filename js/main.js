@@ -7,7 +7,6 @@ class Calculator {
         this.currentValue = 0
     }
 
-
     add(number) {
         this.currentValue += number
     }
@@ -23,7 +22,7 @@ class Calculator {
     divide(number) {
         if (number === 0) {
             console.error('Cannot divide by zero')
-            returnv
+            return
         }
 
         this.currentValue /= number
@@ -44,7 +43,6 @@ let firstOperand = null
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         let value = button.textContent
-
 
         if (!isNaN(value) || value === ".") {
             if (value === "." && display.textContent.includes(".")) return;
